@@ -5,11 +5,15 @@ plugins {
 group 'ru.netology'
 version '1.0-SNAPSHOT'
 
+compileJava.options.encoding = "UTF-8"
+compileTestJava.options.encoding = "UTF-8"
+
 repositories {
     mavenCentral()
 }
 
 dependencies {
+    testAnnotationProcessor 'org.projectlombok:lombok:1.18.20'
     testImplementation 'org.projectlombok:lombok:1.18.20'
     testImplementation 'org.junit.jupiter:junit-jupiter:5.8.1'
     testImplementation 'mysql:mysql-connector-java:8.0.25'

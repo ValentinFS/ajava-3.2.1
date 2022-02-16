@@ -4,6 +4,7 @@ import com.codeborne.selenide.SelenideElement;
 import ru.netology.data.DataHelper;
 
 import static com.codeborne.selenide.Condition.visible;
+import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 
 public class VerificationPage {
@@ -21,4 +22,8 @@ public class VerificationPage {
     }
 
 
+    public void getErrorInvalidVerify() {
+        $(byText("Ошибка")).shouldBe(visible);
+        $(byText("Неверно указан код! Попробуйте ещё раз.")).shouldBe(visible);
+    }
 }
